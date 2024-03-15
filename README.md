@@ -3,7 +3,7 @@
 </div>
 
 ## _printf
-
+ 
 Our project is to create the _printf function for these following conversion specifiers: c, s, %, d, i.
 The _printf function in language This is a standard library function which allows you to display formatted data on the console. Its name means "print formatted", which indicates its ability to handle specific formats for different types of data. It typically takes a format string as the first argument, followed by the values to display, depending on the format specifications included in the string.
 
@@ -83,3 +83,5 @@ Percent : %
 The _printf function in C language returns the total number of characters written to standard output (usually the console). The return value indicates the number of bytes or characters that were displayed, including special characters such as newlines ("\n"). If an error occurs, _printf returns a negative number, and the errno variable is updated to indicate the type of error.
 
 ## Flowchart
+
+<img src = "flowchart.png">
