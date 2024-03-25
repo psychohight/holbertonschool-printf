@@ -7,5 +7,6 @@
 
 int print_c(va_list argc);
 int _putchar(char c);
+int print_percent(void);
 
 #endif
