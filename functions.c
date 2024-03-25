@@ -13,3 +13,16 @@ int _putchar(char c)
 {
   retrun (write(1, &c, 1));
 }
+/*
+*print_c - print a char
+*@c : char
+*Return: return 1
+*/
+
+print_c (va_list argc)
+{
+    char c;
+    c = va_arg(argc, int);
+    _putchar (c);
+    return (1);
+}
