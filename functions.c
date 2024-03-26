@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>  
 #include <stdarg.h>
+#include <unistd.h>
 /**
  * _putchar - Function that print caractere
  *
@@ -11,7 +12,7 @@
  */
 int _putchar(char c)
 {
-  retrun (write(1, &c, 1));
+  return (write(1, &c, 1));
 }
 /**
 *print_c - print a char
@@ -19,11 +20,11 @@ int _putchar(char c)
 * Return: return 1.
 */
 
-print_c (va_list argc)
+int print_c (va_list argc)
 {
     char c;
     c = va_arg(argc, int);
-    _putchar (c);
+    _putchar(c);
     return (1);
 }
 
