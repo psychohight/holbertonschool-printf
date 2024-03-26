@@ -12,7 +12,9 @@ int _printf(const char *format, ...)
 	match m[] = {
 	{"%c", print_c},
 	{"%s", print_str},
-	{"%%", print_percent}
+	{"%%", print_percent},
+	{"%d", print_int},
+	{"%i", print_int}
 	};
 va_list argc;
 int i = 0, j, count = 0;
@@ -23,7 +25,7 @@ return (-1);
 
 while (format[i] != '\0')
 {
-	for (j = 0; j < 3; j++)
+	for (j = 0; j < 5; j++)
 	{
 	if (m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])
 		{

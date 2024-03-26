@@ -66,3 +66,35 @@ int print_str(va_list argc)
 	}
 	return (count);
 }
+/**
+ * print_int - print a number.
+ * @argc: nb d'arguments.
+ * Return: total of nb.
+*/
+	int print_int(va_list argc)
+{
+	int nb;
+	int count = 0;
+	nb = va_arg(argc, int);
+	help(nb, &count);
+	return (count);
+}
+ 
+ /*
+ */
+void help(int n, int *count)
+{
+
+		if (n < 0)
+	{
+		_putchar('-');
+		n = -n;
+		(*count)++;
+	}
+	if (n >= 10)
+	{
+		help(n / 10, count);
+	}
+		_putchar((n % 10) + '0');
+		(*count)++;
+}
