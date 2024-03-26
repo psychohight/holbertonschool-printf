@@ -1,4 +1,3 @@
-/*header files*/
 #ifndef MAIN_H
 #define MAIN_H
 /*standart library*/
@@ -11,11 +10,15 @@ int _putchar(char c);
 int print_percent(void);
 int print_str(va_list argc);
 int _printf(const char *format, ...);
-/*struct format*/
-typedef struct format{
-    char *id;
-    int (*f)();
+/**
+*struct format - prototype of function
+*@id: description
+*@f: desc
+*/
+typedef struct format
+{
+char *id;
+int (*f)();
+
 } match;
-
-
 #endif
