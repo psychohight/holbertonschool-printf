@@ -53,7 +53,7 @@ int _printf(const char *format, ...)
 
 /**
  * get_func - Entry point
- * @a: character.
+ * @c: character to print.
  *
  * Return: 0.
  */
@@ -64,6 +64,8 @@ int (*get_func(const char c))(va_list)
 		{'s', print_str},
 		{'d', print_int},
 		{'i', print_int},
+		{'o', convert_to_octal},
+		{'b', convert_to_binary},
 		{'\0', NULL}
 	};
 
