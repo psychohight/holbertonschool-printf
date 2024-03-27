@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#include <unistd.h>
 /*prototype of functions.c*/
 int print_c(va_list argc);
 int _putchar(char c);
