@@ -64,6 +64,7 @@ int (*get_func(const char c))(va_list)
 		{'s', print_str},
 		{'d', print_int},
 		{'i', print_int},
+		{'u', print_int},
 		{'o', convert_to_octal},
 		{'b', convert_to_binary},
 		{'\0', NULL}
