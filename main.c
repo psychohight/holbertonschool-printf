@@ -36,5 +36,7 @@ int main(void)
     printf("Len:[%d]\n", len2);
     _printf("%b\n", 98);
     printf("%b\n", 98);
+    _printf("%c%c\n", 'S', 'S');
+    printf("%c%c\n", 'S', 'S');
     return (0);
 }
