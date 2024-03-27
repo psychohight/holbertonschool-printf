@@ -74,7 +74,7 @@ void help(int n, int *count)
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+		n *= -1;
 		(*count)++;
 	}
 	if (n >= 10)
