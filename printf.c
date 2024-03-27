@@ -16,8 +16,7 @@ int _printf(const char *format, ...)
 	{"%d", print_int},
 	{"%i", print_int},
 	{"%b", convert_to_binary},
-	{"%o", convert_to_octal},
-	{"%x", convert_to_octal}
+	{"%o", convert_to_octal}
 	};
 va_list argc;
 int i = 0, j, count = 0;
@@ -28,7 +27,7 @@ return (-1);
 
 while (format[i] != '\0')
 {
-	for (j = 0; j < 8; j++)
+	for (j = 0; j < 7; j++)
 	{
 	if (m[j].id[0] == format[i] && m[j].id[1] == format[i + 1])
 		{
