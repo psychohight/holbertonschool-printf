@@ -16,7 +16,7 @@ int _putchar(char c)
 	return (write(1, &c, 1));
 }
 /**
-*print_c - print a char
+* print_c - print a char
 * @argc: liste d'arguments.
 * Return: return 1.
 */
@@ -31,18 +31,21 @@ int print_c(va_list argc)
 }
 
 /**
-*print_percent - print %.
+* print_percent - print %.
 * @void: 1argument.
 * Return: return 1.
 */
-int print_percent(void)
+int print_percent(va_list argc)
 {
-	_putchar('%');
+  char c;
+  c = va_arg(argc, int);
+  c = '%';
+	_putchar(c);
 	return (1);
 }
 
 /**
-*print_str - print string.
+* print_str - print string.
 * @argc: nb d'arguments.
 * Return: count.
 */
