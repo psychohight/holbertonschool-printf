@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 /**
- *_printf - print string
+ *_printf - print string.
  * @format: the specifier character
  * Return: nb of character printed.
 */
