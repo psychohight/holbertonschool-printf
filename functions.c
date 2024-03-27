@@ -37,22 +37,21 @@ int print_c(va_list argc)
 int print_str(va_list argc)
 {
 	int i;
-	int count = 0;
 	char *str;
 
 	str = va_arg(argc, char*);
 
 	if (str == NULL)
 	{
-		str = "(null)";
-		count = count + 6;
+		write(1, "(null)", 6);
+		return (6);
 	}
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		_putchar(str[i]);
-		count++;
+	     
 	}
-	return (count);
+	return (i);
 }
 /**
  * print_int - print a number.
