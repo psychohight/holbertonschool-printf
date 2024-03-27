@@ -60,27 +60,40 @@ int print_str(va_list argc)
 */
 int print_int(va_list argc)
 {
-	int nb;
-	int count = 0;
-	nb = va_arg(argc, int);
-	help(nb, &count);
-	return (count);
-}
+        long int n;
+	int count, tmp, base;
 
- /*
- */
-void help(int n, int *count)
-{
+	count = 0;
+	n = va_arg(argc, int);
+
 	if (n < 0)
 	{
-		_putchar('-');
 		n *= -1;
-		(*count)++;
+		_putchar('-');
+		count++;
 	}
-	if (n >= 10)
+	if (n >= 0 && n <= 9)
 	{
-		help(n / 10, count);
+		_putchar(n + '0');
+		count++;
 	}
-		_putchar((n % 10) + '0');
-		(*count)++;
+	if (n > 9)
+	{
+		base = 10;
+
+		while (n / base > 9)
+		{
+			base *= 10;
+		}
+
+		while (base > 0)
+		{
+			tmp = n / base;
+			n = n % base;
+			_putchar(tmp + '0');
+			base = base / 10;
+			count++;
+		}
+	}
+	return (count);
 }
