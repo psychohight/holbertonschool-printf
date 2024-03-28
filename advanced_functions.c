@@ -12,16 +12,13 @@
 int convert_to_binary(va_list argc)
 {
 unsigned int nb;
- int count = 0;
-  nb = va_arg(argc, unsigned int);
-  
-  help_binary(nb, &count);
-  return (count);
+int count = 0;
+nb = va_arg(argc, unsigned int);
+	help_binary(nb, &count);
+	return (count);
 }
-
- 
 /**
- * help - Function that help for convert to binary
+ * help_binary- Function that help for convert to binary.
  *
  * @n: number to convert
  * @count: total number
@@ -29,16 +26,13 @@ unsigned int nb;
  */
 void help_binary(unsigned int n, int *count)
 {
-  if ((n / 2) != 0 )
-	  {        
-                help_binary(n / 2, count);
-	  }
+	if ((n / 2) != 0)
+	{
+		help_binary(n / 2, count);
+	}
 	_putchar((n % 2) + '0');
-                (*count)++;
+		(*count)++;
 }
-
-
-
 /**
  * convert_to_octal - Function that convert a int to octal
  *
@@ -49,16 +43,14 @@ void help_binary(unsigned int n, int *count)
 int convert_to_octal(va_list argc)
 {
 unsigned int nb;
- int count = 0;
-  nb = va_arg(argc, unsigned int);
-  
-  help_octal(nb, &count);
-  return (count);
-}
+	int count = 0;
 
- 
+	nb = va_arg(argc, unsigned int);
+	help_octal(nb, &count);
+	return (count);
+}
 /**
- * help - Function that help for convert to binary
+ * help_octal - Function that help for convert to binary.
  *
  * @n: number to convert
  * @count: total number
@@ -66,10 +58,10 @@ unsigned int nb;
  */
 void help_octal(unsigned int n, int *count)
 {
-  if ((n / 8) != 0)
-          {        
-	    help_octal(n / 8, count);
-          }
-        _putchar((n % 8) + '0');
-	(*count)++;
+	if ((n / 8) != 0)
+	{
+		help_octal(n / 8, count);
+	}
+		_putchar((n % 8) + '0');
+		(*count)++;
 }

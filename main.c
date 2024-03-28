@@ -38,5 +38,9 @@ int main(void)
     printf("%b\n", 98);
     _printf("%c%c\n", 'S', 'S');
     printf("%c%c\n", 'S', 'S');
+    _printf("Unknown:[%r]\n");
+    printf("Unknown:[%r]\n");
+    _printf("%r\n", "hello");
+    printf("%r\n", "hello");
     return (0);
 }

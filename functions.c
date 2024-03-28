@@ -49,7 +49,6 @@ int print_str(va_list argc)
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		_putchar(str[i]);
-	     
 	}
 	return (i);
 }
@@ -60,7 +59,7 @@ int print_str(va_list argc)
 */
 int print_int(va_list argc)
 {
-        long int n;
+	long int n;
 	int count, tmp, base;
 
 	count = 0;
