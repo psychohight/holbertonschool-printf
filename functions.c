@@ -1,4 +1,3 @@
-
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -31,20 +30,6 @@ int print_c(va_list argc)
 }
 
 /**
-* print_percent - print %.
-* @void: 1argument.
-* Return: return 1.
-*/
-int print_percent(va_list argc)
-{
-  char c;
-  c = va_arg(argc, int);
-  c = '%';
-	_putchar(c);
-	return (1);
-}
-
-/**
 * print_str - print string.
 * @argc: nb d'arguments.
 * Return: count.
@@ -52,52 +37,63 @@ int print_percent(va_list argc)
 int print_str(va_list argc)
 {
 	int i;
-	int count = 0;
 	char *str;
 
 	str = va_arg(argc, char*);
 
 	if (str == NULL)
 	{
-		str = "(NULL)";
-		count = count + 6;
+		write(1, "(null)", 6);
+		return (6);
 	}
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		_putchar(str[i]);
-		count++;
+	     
 	}
-	return (count);
+	return (i);
 }
 /**
  * print_int - print a number.
  * @argc: nb d'arguments.
  * Return: total of nb.
 */
-	int print_int(va_list argc)
+int print_int(va_list argc)
 {
-	int nb;
-	int count = 0;
-	nb = va_arg(argc, int);
-	help(nb, &count);
-	return (count);
-}
- 
- /*
- */
-void help(int n, int *count)
-{
+        long int n;
+	int count, tmp, base;
 
-		if (n < 0)
+	count = 0;
+	n = va_arg(argc, int);
+
+	if (n < 0)
 	{
+		n *= -1;
 		_putchar('-');
-		n = -n;
-		(*count)++;
+		count++;
 	}
-	if (n >= 10)
+	if (n >= 0 && n <= 9)
 	{
-		help(n / 10, count);
+		_putchar(n + '0');
+		count++;
 	}
-		_putchar((n % 10) + '0');
-		(*count)++;
+	if (n > 9)
+	{
+		base = 10;
+
+		while (n / base > 9)
+		{
+			base *= 10;
+		}
+
+		while (base > 0)
+		{
+			tmp = n / base;
+			n = n % base;
+			_putchar(tmp + '0');
+			base = base / 10;
+			count++;
+		}
+	}
+	return (count);
 }

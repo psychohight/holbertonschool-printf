@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
+#include <unistd.h>
 /*prototype of functions.c*/
 int print_c(va_list argc);
 int _putchar(char c);
@@ -16,6 +17,7 @@ int convert_to_binary(va_list argc);
 void help_binary(unsigned int n, int *count);
 int convert_to_octal(va_list argc);
 void help_octal(unsigned int n, int *count);
+int (*get_func(const char c))(va_list);
 /**
 *struct format - prototype of function
 *@id: description
@@ -23,7 +25,7 @@ void help_octal(unsigned int n, int *count);
 */
 typedef struct format
 {
-char *id;
+char id;
 int (*f)(va_list);
 
 } match;
