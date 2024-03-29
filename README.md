@@ -83,5 +83,6 @@ Percent : %
 The _printf function in C language returns the total number of characters written to standard output (usually the console). The return value indicates the number of bytes or characters that were displayed, including special characters such as newlines ("\n"). If an error occurs, _printf returns a negative number, and the errno variable is updated to indicate the type of error.
 
 ## Flowchart
-![FLOWCHART FINI](https://github.com/psychohight/holbertonschool-printf/assets/146717232/7793301e-5230-4713-bab7-fa80e70f83d7)
 
+
+![Copie de Diagramme sans nom drawio](https://github.com/psychohight/holbertonschool-printf/assets/146717232/98025f28-fe52-409c-98a0-2b29f420ee8d)
