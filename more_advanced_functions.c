@@ -4,33 +4,6 @@
 #include <stdarg.h>
 #include <unistd.h>
 /**
- * print_rev - Function that reverse a string
- *
- * @argc: la liste des argument
- * Return: return i.
- */
-int print_rev(va_list argc)
-{
-	int i = 0;
-	int j = 0;
-	char *str = va_arg(argc, char*);
-
-	if (str == NULL)
-	{
-	str = "%r";
-	i++;
-	}
-	while (str[i] != '\0')
-	{
-	i++;
-	}
-	for (j = i - 1; j >= 0 ; j--)
-	{
-	_putchar(str[j]);
-	}
-	return (i);
-}
-/**
  * print_unsigned_int - Function that convert a int to unsigned int
  *
  * @argc: number of argument
